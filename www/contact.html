@@ -16,7 +16,11 @@
     </header>
 
     <div class="container">
-      <form action="" method="post" name="contact" netlify>
+      <form action="" method="post" name="contact" data-netlify="true" data-netlify-recaptcha="true">
+        <p class="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
         <div>
           <label for="name">Name</label>
           <input type="text" name="name" id="name" />
@@ -26,6 +30,8 @@
           <label for="message">Message</label>
           <textarea name="message" id="message"></textarea>
         </div>
+
+        <div data-netlify-recaptcha="true"></div>
 
         <button type="submit">Send!</button>
       </form>
